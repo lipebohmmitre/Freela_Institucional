@@ -4,8 +4,8 @@
     {
         public int MatriculaId { get; set; }
         public DateTime DataMatricula { get; set; }
-        public string ObservacaoMatricula { get; set; }
-
+        public string ObservacaoMatricula { get; set; } = string.Empty;
+        public string StatusMatricula { get; set; } = string.Empty;
    
         public int AlunoId { get; set; }
         public virtual Aluno Aluno { get; set; }

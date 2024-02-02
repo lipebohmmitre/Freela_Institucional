@@ -6,6 +6,6 @@
         public string NomeCategoria { get; set; } = string.Empty;
 
 
-        public virtual ICollection<Curso> Cursos { get; set; }
+        public ICollection<Curso>? Cursos { get; set; }
     }
 }

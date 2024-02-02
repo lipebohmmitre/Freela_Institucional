@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\CSharpProjects\\FreelaInstitucional\\Freela_Institucional\\backEnd\\AcademicApplication\\AcademicApplication\\AcademicApplication.csproj": {}
+    "C:\\Users\\Usuário\\Documents\\EstudoCSharp\\Freela\\Freela_Institucional\\backEnd\\AcademicApplication\\AcademicApplication\\AcademicApplication.csproj": {}
   },
   "projects": {
-    "C:\\CSharpProjects\\FreelaInstitucional\\Freela_Institucional\\backEnd\\AcademicApplication\\AcademicApplication\\AcademicApplication.csproj": {
+    "C:\\Users\\Usuário\\Documents\\EstudoCSharp\\Freela\\Freela_Institucional\\backEnd\\AcademicApplication\\AcademicApplication\\AcademicApplication.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\CSharpProjects\\FreelaInstitucional\\Freela_Institucional\\backEnd\\AcademicApplication\\AcademicApplication\\AcademicApplication.csproj",
+        "projectUniqueName": "C:\\Users\\Usuário\\Documents\\EstudoCSharp\\Freela\\Freela_Institucional\\backEnd\\AcademicApplication\\AcademicApplication\\AcademicApplication.csproj",
         "projectName": "AcademicApplication",
-        "projectPath": "C:\\CSharpProjects\\FreelaInstitucional\\Freela_Institucional\\backEnd\\AcademicApplication\\AcademicApplication\\AcademicApplication.csproj",
-        "packagesPath": "C:\\Users\\felip\\.nuget\\packages\\",
-        "outputPath": "C:\\CSharpProjects\\FreelaInstitucional\\Freela_Institucional\\backEnd\\AcademicApplication\\AcademicApplication\\obj\\",
+        "projectPath": "C:\\Users\\Usuário\\Documents\\EstudoCSharp\\Freela\\Freela_Institucional\\backEnd\\AcademicApplication\\AcademicApplication\\AcademicApplication.csproj",
+        "packagesPath": "C:\\Users\\Usuário\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Usuário\\Documents\\EstudoCSharp\\Freela\\Freela_Institucional\\backEnd\\AcademicApplication\\AcademicApplication\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\felip\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Usuário\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -40,6 +40,14 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.1, )"
@@ -84,7 +92,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,4 +1,8 @@
 using AcademicApplication.Data.Context;
+using AcademicApplication.MappingProfiles;
+using AcademicApplication.Services;
+using AcademicApplication.Services.ServicesInterfaces;
+using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -11,8 +15,25 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 
+var mappingConfig = new MapperConfiguration(mc =>
+{
+    mc.AddProfile(new MappingProfile());
+});
+
+IMapper mapper = mappingConfig.CreateMapper();
+
+builder.Services.AddSingleton(mapper);
+
+
+
+builder.Services.AddScoped<ICategoriaService, CategoriaService>();
+
 builder.Services.AddDbContext<ApplicationDbContext>(options => 
     options.UseSqlServer(builder.Configuration.GetConnectionString("ConexaoSqlServerHome")));
+
+
+
+
 
 
 var app = builder.Build();
