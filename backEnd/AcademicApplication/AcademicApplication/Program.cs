@@ -27,6 +27,7 @@ builder.Services.AddSingleton(mapper);
 
 
 builder.Services.AddScoped<ICategoriaService, CategoriaService>();
+builder.Services.AddScoped<ICursoService, CursoService>();
 
 builder.Services.AddDbContext<ApplicationDbContext>(options => 
     options.UseSqlServer(builder.Configuration.GetConnectionString("ConexaoSqlServerHome")));

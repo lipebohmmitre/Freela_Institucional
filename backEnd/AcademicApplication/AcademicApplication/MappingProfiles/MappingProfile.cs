@@ -9,6 +9,7 @@ namespace AcademicApplication.MappingProfiles
         public MappingProfile()
         {
             CreateMap<Categoria, CategoriaDTO>().ReverseMap();
+            CreateMap<Curso, CursoDTO>().ReverseMap();
         }
     }
 }

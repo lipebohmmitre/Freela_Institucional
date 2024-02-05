@@ -12,6 +12,10 @@
         public virtual Categoria Categoria { get; set; }
 
 
+        public int AreaAtuacaoId { get; set; }
+        public virtual AreaAtuacao AreaAtuacao { get; set; }
+
+
         public virtual ICollection<Disciplina> Disciplinas { get; set; }
 
         

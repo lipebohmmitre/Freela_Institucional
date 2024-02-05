@@ -18,7 +18,7 @@ namespace AcademicApplication.Data.Context
         public DbSet<Boleto> Boletos { get; set; }
         public DbSet<Funcionario> Funcionarios { get; set; }
         public DbSet<Matricula> Matriculas { get; set; }
-
         public DbSet<FinanceiroAluno> FinanceirosAlunos { get; set; }
+        public DbSet<AreaAtuacao> AreasAtuacoes { get; set; }
     }
 }

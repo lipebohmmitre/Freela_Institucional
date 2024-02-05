@@ -4,6 +4,7 @@ using AcademicApplication.Data.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AcademicApplication.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240205172929_alteracao_area_curso")]
+    partial class alteracao_area_curso
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -135,27 +138,6 @@ namespace AcademicApplication.Migrations
                     b.ToTable("Alunos");
                 });
 
-            modelBuilder.Entity("AcademicApplication.Data.Entities.AreaAtuacao", b =>
-                {
-                    b.Property<int>("AreaAtuacaoId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("AreaAtuacaoId"));
-
-                    b.Property<string>("AreaAtuacaoTitulo")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Descricao")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("AreaAtuacaoId");
-
-                    b.ToTable("AreasAtuacoes");
-                });
-
             modelBuilder.Entity("AcademicApplication.Data.Entities.Boleto", b =>
                 {
                     b.Property<int>("BoletoId")
@@ -228,8 +210,9 @@ namespace AcademicApplication.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CursoId"));
 
-                    b.Property<int>("AreaAtuacaoId")
-                        .HasColumnType("int");
+                    b.Property<string>("AreaCurso")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("CategoriaId")
                         .HasColumnType("int");
@@ -246,8 +229,6 @@ namespace AcademicApplication.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("CursoId");
-
-                    b.HasIndex("AreaAtuacaoId");
 
                     b.HasIndex("CategoriaId");
 
@@ -550,19 +531,11 @@ namespace AcademicApplication.Migrations
 
             modelBuilder.Entity("AcademicApplication.Data.Entities.Curso", b =>
                 {
-                    b.HasOne("AcademicApplication.Data.Entities.AreaAtuacao", "AreaAtuacao")
-                        .WithMany("Cursos")
-                        .HasForeignKey("AreaAtuacaoId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("AcademicApplication.Data.Entities.Categoria", "Categoria")
                         .WithMany("Cursos")
                         .HasForeignKey("CategoriaId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.Navigation("AreaAtuacao");
 
                     b.Navigation("Categoria");
                 });
@@ -626,11 +599,6 @@ namespace AcademicApplication.Migrations
                         .HasForeignKey("DisciplinasDisciplinaId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-                });
-
-            modelBuilder.Entity("AcademicApplication.Data.Entities.AreaAtuacao", b =>
-                {
-                    b.Navigation("Cursos");
                 });
 
             modelBuilder.Entity("AcademicApplication.Data.Entities.Categoria", b =>
