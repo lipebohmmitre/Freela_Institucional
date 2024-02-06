@@ -30,7 +30,7 @@ builder.Services.AddScoped<ICategoriaService, CategoriaService>();
 builder.Services.AddScoped<ICursoService, CursoService>();
 builder.Services.AddScoped<IAreaAtuacaoService, AreaAtuacaoService>();
 builder.Services.AddScoped<IDisciplinaService, DisciplinaService>();
-
+builder.Services.AddScoped<IMatriculaService, MatriculaService>();
 
 
 
