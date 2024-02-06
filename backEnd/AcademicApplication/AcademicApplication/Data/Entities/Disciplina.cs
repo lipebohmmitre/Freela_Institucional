@@ -10,6 +10,6 @@
         public decimal CargaHorariaDisciplina { get; set; }
 
 
-        public virtual ICollection<Curso> Cursos { get; set; }
+        public virtual ICollection<Curso>? Cursos { get; set; }
     }
 }
