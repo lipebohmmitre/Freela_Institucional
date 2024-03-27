@@ -1,2 +1,2 @@
 # Freela_Institucional
-Projeto Freelancer para um grupo empresarial na área da educação
+Aplicação feita para ajudar o atendimento a pedido de colegas, básicamente apenas um CRUD na base de dados feita para auxiliar nas consultas dos cursos e disciplinas
